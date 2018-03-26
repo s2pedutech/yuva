@@ -44,7 +44,7 @@ export class LoginPage {
 
 
 
-   /**
+   /***
     * Log in using the loginWithEmailAndPassword method
     * from the AuthProvider service (supplying the email
     * and password FormControls from the template via the
