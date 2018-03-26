@@ -1,0 +1,50 @@
+
+
+<ion-content >
+
+
+  <div style="background-color: #F4CF47; height: 40%" text-center>
+      <div text-center>
+      <img src="assets/imgs/logo-dark.png">
+          </div>
+  </div> 
+
+
+   <div  
+      class="login">
+
+      <form
+        [formGroup]="form"
+        (ngSubmit)="logIn()" class="loginform">
+        <ion-list>
+            <!--<ion-item margin-bottom>
+             
+               <ion-input type="text"
+                  formControlName="mobile" placeholder="Mobile Number"></ion-input>
+            </ion-item>
+            <ion-item class="error-message" *ngIf="form.controls.mobile.touched">
+      <p>Please enter a valid mobile no.</p>
+    </ion-item>-->
+            <ion-item  margin-bottom >
+      <ion-input  class="logininput" formControlName="mobile" type="text" placeholder="Your Mobile No.">
+      </ion-input>
+    </ion-item>
+   
+
+            <button
+               ion-button
+               color="primary"
+               text-center
+               block [disabled]="!form.valid" class="log">Log In</button>
+         </ion-list>
+      </form>
+ <div class="enter-div">
+        <div class="foyopass-div" (click)="register()">forgot your password?</div>
+      </div>
+   </div>
+ <!--<button ion-button  clear (click)="register()" class="enter-div">
+  Or Register here
+  </button>-->
+   
+
+</ion-content>

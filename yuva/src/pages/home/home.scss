@@ -1,0 +1,38 @@
+page-blog {
+
+}
+
+@keyframes clips {
+  50% {
+/*clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%)*/
+  }
+}
+
+.button{
+    margin-left: 15%;
+    margin-top: 15%;
+    font-size: 20px; 
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.devicons {
+    
+    color: red;
+    fill: blue;
+}
+.devicon-c-plain {
+    font-size: 8rem;
+        
+}
+
+.colored1 {
+    font-size: 8rem;
+    color: white;
+  
+    
+}

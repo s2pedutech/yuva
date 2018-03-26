@@ -1,0 +1,35 @@
+page-login {
+
+   
+    .loginform{
+        position: relative;
+        left: 22px;
+    }
+    
+ .item.item-input {
+	border: none;
+	position: relative;
+    
+    right: 7px;
+    top: 50px;
+    background-color: transparent;
+    width:100%;
+}
+    .log {
+	position: relative;
+    top: 70px;
+	width: 150px;
+	height: 40px;
+    border-radius: 25px;
+	border: none;
+        color: white;
+}
+    .enter-div {
+	text-align: center;
+        font-size: 15px;
+        position: relative;
+   top: 70px;
+        left: 5px;
+        color: #488AFF;
+}
+}

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Drives</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div text-center>
+    <h3 padding>YUVA Drives</h3>
+    </div>
+  <ion-list>
+      <ion-item (click)="itemTapped($event, item)" *ngFor="let item of grid" >
+    <ion-avatar item-start>
+      <img src="{{item.src}}">
+    </ion-avatar>
+    <h2>{{item.title}}</h2>
+    <p item-end>{{item.date}}</p>
+  </ion-item>
+   
+  </ion-list>
+ 
+</ion-content>

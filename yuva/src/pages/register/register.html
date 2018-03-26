@@ -1,0 +1,131 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Signup</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="auth-page">
+  <img src="http://placehold.it/300x150" alt="Banner for the signup page" />
+  <form  [formGroup]="signupForm" (submit)="signupUser()" >
+      
+        <ion-item [class.invalid]="!signupForm.controls.name.valid && signupForm.controls.name.touched"
+      [class.valid]="signupForm.controls.name.valid && signupForm.controls.name.touched">
+      <ion-label stacked>Name</ion-label>
+      <ion-input formControlName="name" type="text" >
+      </ion-input>
+    </ion-item>
+       <ion-item class="error-message" *ngIf="!signupForm.controls.name.valid &&
+       signupForm.controls.name.touched">
+      <p>Please enter a valid name </p>
+    </ion-item>
+    
+    <ion-item [class.invalid]="!signupForm.controls.email.valid && signupForm.controls.email.touched"
+      [class.valid]="signupForm.controls.email.valid && signupForm.controls.email.touched">
+      <ion-label stacked>Email</ion-label>
+      <ion-input formControlName="email" type="email" >
+      </ion-input>
+    </ion-item>
+    <ion-item class="error-message" *ngIf="!signupForm.controls.email.valid &&
+       signupForm.controls.email.touched">
+      <p>Please enter a valid email address.</p>
+    </ion-item>
+      
+      <ion-item [class.invalid]="!signupForm.controls.mobile.valid && signupForm.controls.mobile.touched"
+      [class.valid]="signupForm.controls.mobile.valid && signupForm.controls.mobile.touched">
+      <ion-label stacked>Mobile No</ion-label>
+      <ion-input formControlName="mobile" type="text" >
+      </ion-input>
+    </ion-item>
+    <ion-item class="error-message" *ngIf="!signupForm.controls.mobile.valid &&
+       signupForm.controls.mobile.touched">
+      <p>Please enter a valid mobile no.</p>
+    </ion-item>
+      
+
+      
+          <ion-item [class.invalid]="!signupForm.controls.ssc.valid && signupForm.controls.ssc.touched"
+      [class.valid]="signupForm.controls.ssc.valid && signupForm.controls.ssc.touched"  >
+      <ion-label stacked>10th score(%) </ion-label>
+      <ion-input formControlName="ssc"  type="text" >
+      </ion-input>
+    </ion-item>
+      <ion-item class="error-message" *ngIf="!signupForm.controls.ssc.valid &&
+       signupForm.controls.ssc.touched">
+      <p>Please enter valid %</p>
+    </ion-item>
+      
+          <ion-item [class.invalid]="!signupForm.controls.hsc.valid && signupForm.controls.hsc.touched"
+      [class.valid]="signupForm.controls.hsc.valid && signupForm.controls.hsc.touched" >
+      <ion-label stacked>12th score(%) </ion-label>
+      <ion-input ftype="text" formControlName="hsc" >
+      </ion-input>
+    </ion-item>
+       <ion-item class="error-message" *ngIf="!signupForm.controls.hsc.valid &&
+       signupForm.controls.hsc.touched">
+      <p>Please enter valid %</p>
+    </ion-item>
+      
+          <ion-item [class.invalid]="!signupForm.controls.degree.valid && signupForm.controls.degree.touched"
+      [class.valid]="signupForm.controls.degree.valid && signupForm.controls.degree.touched" >
+      <ion-label stacked>Graduation (%)</ion-label>
+      <ion-input formControlName="degree" type="text" >
+      </ion-input>
+    </ion-item>  <ion-item class="error-message" *ngIf="!signupForm.controls.degree.valid &&
+       signupForm.controls.degree.touched">
+      <p>Please enter valid %</p>
+    </ion-item>
+      
+          <ion-item [class.invalid]="!signupForm.controls.year.valid && signupForm.controls.year.touched"
+      [class.valid]="signupForm.controls.year.valid && signupForm.controls.year.touched" >
+      <ion-label stacked>Year of Passing</ion-label>
+      <ion-input formControlName="year" type="text" >
+      </ion-input>
+    </ion-item>  <ion-item class="error-message" *ngIf="!signupForm.controls.year.valid &&
+       signupForm.controls.year.touched">
+      <p>Please enter a valid Year</p>
+    </ion-item>
+      
+   
+    
+  <ion-item>
+         <ion-label stacked>College</ion-label>
+
+    <ion-select [(ngModel)]="selectedCollege" [ngModelOptions]="{standalone: true}">
+          <ion-option *ngFor="let name of collegedata;let i = index" [selected]= "i === 0" 
+                  [value]="name">{{name.college}}</ion-option>      
+    </ion-select>
+  </ion-item>
+     
+<ion-item>
+    
+          
+ <ion-label stacked>Stream</ion-label>
+
+    <ion-select [(ngModel)]="selectedStream" [ngModelOptions]="{standalone: true}">
+          <ion-option *ngFor="let name of stream" 
+                  [value]="name">{{name.stream}}</ion-option>      
+    </ion-select>
+  </ion-item>
+     
+<ion-item>
+          
+ <ion-label stacked>Branch</ion-label>
+
+    <ion-select [(ngModel)]="selectedBranch" [ngModelOptions]="{standalone: true}">
+          <ion-option *ngFor="let name of branch" 
+                  [value]="name">{{name.branch}}</ion-option>      
+    </ion-select>
+  </ion-item>
+      
+      
+      
+          <button ion-button block type="submit"  class="reg" [disabled]="!signupForm.valid">
+      Register 
+    </button>
+      
+      </form> 
+    
+
+ 
+  
+</ion-content>
